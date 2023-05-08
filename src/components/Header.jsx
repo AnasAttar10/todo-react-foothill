@@ -4,14 +4,14 @@ import Toggleswitch from './Toggleswitch'
 import AddTask from './AddTask'
 
 
-function Header({showItems , handleSearchInput ,Addtask}) {
+const Header = ({showItems , handleSearchInput ,addTask ,isTasksVisible}) => {
 
   return (
     <div>
         <h2 className='p-2'>To Do List </h2>
-        <AddTask Addtask={Addtask}/>
+        <AddTask addTask={addTask}/>
         <Search handleSearchInput={handleSearchInput}/>
-        <Toggleswitch showItems={showItems}/>
+        <Toggleswitch showItems={showItems} isTasksVisible={isTasksVisible}/>
 
     </div>
   )

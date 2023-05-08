@@ -1,7 +1,7 @@
 import React from 'react'
 import Task from './Task'
 
-function TasksTable({tasks ,isVisible ,TaskDone ,deletTask}) {
+const TasksTable = ({tasks ,isTasksVisible ,finishTask ,deletTask}) => {
   return (
     <div>
         <div className='d-flex justify-content-between align-items-center  bg-primary p-3 text-white border border-bottom-2'>
@@ -9,7 +9,7 @@ function TasksTable({tasks ,isVisible ,TaskDone ,deletTask}) {
           <p className='col-sm-2 m-0 text-end'>Done</p>
           <p className='col-sm-2 m-0 text-end'>Delete</p>
         </div>
-        { isVisible && tasks.map(t => <Task task={t} key={Math.random()} TaskDone={TaskDone}
+        { isTasksVisible && tasks.map(t => <Task task={t} key={t.id} finishTask={finishTask}
         deletTask={deletTask}/>)}
     </div>
   )
