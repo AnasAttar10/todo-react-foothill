@@ -42,10 +42,7 @@ function App() {
   }
 
   const finishTask =(targetId)=>{
-    const oldTasks = [...tasks]
-    oldTasks.map(t=>t.id === targetId ? t.completed = ! t.completed : "" )
-    setTasks(oldTasks)
-
+    setTasks([...tasks].map(t=>t.id === targetId ?{...t , completed : ! t.completed } : t))
   }
   const completedTasks = tasks.filter(t=>t.completed).length
 

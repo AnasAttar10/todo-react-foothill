@@ -8,8 +8,9 @@ const Toggleswitch = ({showItems ,isTasksVisible})=> {
      name="toggleswitch"
      defaultChecked={isTasksVisible} 
      onChange={showItems}
+     data-testid = "toggleswitch"
     />
-    <label className="form-check-label  ms-3" >Show All To Dos </label>
+    <label className="form-check-label  ms-3">Show All To Dos </label>
     </div>
   )
 }
